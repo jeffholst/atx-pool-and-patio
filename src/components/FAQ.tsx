@@ -24,7 +24,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: 'Do I need to be home when you service my pool?',
-      answer: 'No, you don't need to be present for routine maintenance. As long as we have access to your pool area, we can perform our services while you're away. We'll leave a report detailing what was done and any recommendations.'
+      answer: "No, you don't need to be present for routine maintenance. As long as we have access to your pool area, we can perform our services while you're away. We'll leave a report detailing what was done and any recommendations."
     },
     {
       question: 'How long does a typical pool cleaning service take?',

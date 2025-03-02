@@ -18,7 +18,7 @@ const Testimonials: React.FC = () => {
     {
       name: 'Emily Davis',
       role: 'Homeowner',
-      text: 'We've tried several pool services in the past, but none compare to the quality and value that CrystalPool provides. They're our go-to pool professionals now.',
+      text: "We've tried several pool services in the past, but none compare to the quality and value that CrystalPool provides. They're our go-to pool professionals now.",
       avatar: 'https://i.pravatar.cc/100?img=3'
     }
   ];
