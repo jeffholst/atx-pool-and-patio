@@ -10,11 +10,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="text-2xl font-bold mb-4 flex items-center">
-              <span className="text-3xl mr-1">💧</span> CrystalPool
+              <span className="text-3xl mr-1">💧</span> ATX Pool and Patio
             </div>
             <p className="text-gray-400 mb-4">
               Professional pool cleaning and maintenance services for residential and commercial properties.
             </p>
+            {/*
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -32,8 +33,8 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
             </div>
+          */} 
           </div>
-          
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -62,22 +63,22 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Pool Cleaning</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Pool Cleaning</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Water Testing</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Water Testing</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Equipment Repair</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Equipment Repair</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Pool Opening</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Pool Opening</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Pool Closing</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Pool Closing</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Green Pool Recovery</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Green Pool Recovery</a>
               </li>
             </ul>
           </div>
@@ -100,14 +101,14 @@ const Footer: React.FC = () => {
             </ul>
             <div className="mt-6">
               <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-              <p className="text-gray-400">(555) 123-4567</p>
-              <p className="text-gray-400">info@crystalpool.com</p>
+              <p className="text-gray-400">(512) 638-7703</p>
+              <p className="text-gray-400"><a href="mailto:support@atxpoolandpatio.com?subject=ATX%20Pool%20and%20Patio">support@atxpoolandpatio.com</a></p>
             </div>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>© {currentYear} CrystalPool. All rights reserved.</p>
+          <p>© {currentYear} ATX Pool and Patio. All rights reserved.</p>
         </div>
       </div>
     </footer>

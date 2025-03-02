@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import WhyChooseUs from '../components/WhyChooseUs';
+import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
 import FreeQuote from '../components/FreeQuote';
@@ -15,6 +16,7 @@ const Index: React.FC = () => {
       <Header />
       <Hero />
       <WhyChooseUs />
+      <Services />
       <Testimonials />
       <FreeQuote />
       <FAQ />

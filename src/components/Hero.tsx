@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-center bg-cover"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+          backgroundImage: 'url("HeroImage01.webp")',
           ...parallaxStyle
         }}
       >
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 md:max-w-4xl">
           <div className="glass rounded-2xl p-8 md:p-10 backdrop-blur-sm bg-white/30 border border-white/30">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 animate-slide-down">
-              Crystal Clear <span className="text-poolblue-light">Pool Solutions</span>
+              Pools and Patios <span className="text-poolblue-light">Reimagined</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-6 md:mb-8 animate-slide-down" style={{ animationDelay: '0.1s' }}>
               Professional pool cleaning and maintenance services for a pristine swimming experience. We take care of your pool, so you can enjoy it worry-free.

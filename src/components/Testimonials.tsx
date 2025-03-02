@@ -6,20 +6,20 @@ const Testimonials: React.FC = () => {
     {
       name: 'Sarah Johnson',
       role: 'Homeowner',
-      text: 'CrystalPool has transformed our backyard pool experience. Their attention to detail and professional service is second to none. Our pool has never looked better!',
-      avatar: 'https://i.pravatar.cc/100?img=1'
+      text: 'ATX Pool and Patio has transformed our backyard pool experience. Their attention to detail and professional service is second to none. Our pool has never looked better!',
+      avatar: 'avatar1.jpg'
     },
     {
       name: 'Michael Chen',
       role: 'Property Manager',
-      text: 'Managing multiple properties with pools used to be a headache until we found CrystalPool. Their flexible scheduling and reliable service have made my job much easier.',
-      avatar: 'https://i.pravatar.cc/100?img=2'
+      text: 'Managing multiple properties with pools used to be a headache until we found ATX Pool and Patio. Their flexible scheduling and reliable service have made my job much easier.',
+      avatar: 'avatar3.jpg'
     },
     {
       name: 'Emily Davis',
       role: 'Homeowner',
-      text: "We've tried several pool services in the past, but none compare to the quality and value that CrystalPool provides. They're our go-to pool professionals now.",
-      avatar: 'https://i.pravatar.cc/100?img=3'
+      text: "We've tried several pool services in the past, but none compare to the quality and value that ATX Pool and Patio provides. They're our go-to pool professionals now.",
+      avatar: 'avatar2.jpg'
     }
   ];
 

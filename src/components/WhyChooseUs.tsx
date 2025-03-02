@@ -45,7 +45,7 @@ const WhyChooseUs: React.FC = () => {
     <section id="about" className="section-padding bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose CrystalPool?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose ATX Pool and Patio?</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We deliver unparalleled pool maintenance services with attention to detail that sets us apart.
           </p>

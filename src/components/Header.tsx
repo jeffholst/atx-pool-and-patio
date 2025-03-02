@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <div className="text-poolblue font-bold text-2xl tracking-tight flex items-center">
-              <span className="text-3xl mr-1">💧</span> CrystalPool
+              <span className="text-3xl mr-1">💧</span> ATX Pool and Patio
             </div>
           </div>
           <Navbar />

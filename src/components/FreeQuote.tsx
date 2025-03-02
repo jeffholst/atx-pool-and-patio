@@ -46,7 +46,7 @@ const FreeQuote: React.FC = () => {
       <div 
         className="absolute inset-0 bg-center bg-cover opacity-15"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")',
+          backgroundImage: 'url("HeroImage02.webp")',
         }}
       ></div>
       
@@ -109,7 +109,7 @@ const FreeQuote: React.FC = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-poolblue focus:border-transparent"
-                      placeholder="(555) 123-4567"
+                      placeholder="(512) 638-7703"
                       required
                     />
                   </div>

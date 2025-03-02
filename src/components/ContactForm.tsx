@@ -54,7 +54,7 @@ const ContactForm: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-gray-800 font-medium">Phone</p>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <p className="text-gray-600">(512) 638-7703</p>
                   </div>
                 </div>
                 
@@ -66,7 +66,7 @@ const ContactForm: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-gray-800 font-medium">Email</p>
-                    <p className="text-gray-600">info@crystalpool.com</p>
+                    <p className="text-gray-600"><a href="mailto:support@atxpoolandpatio.com?subject=ATX%20Pool%20and%20Patio">support@atxpoolandpatio.com</a></p>
                   </div>
                 </div>
                 
@@ -78,8 +78,8 @@ const ContactForm: React.FC = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <p className="text-gray-800 font-medium">Address</p>
-                    <p className="text-gray-600">123 Pool Avenue, Watertown, CA 90210</p>
+                    <p className="text-gray-800 font-medium">Service Area</p>
+                    <p className="text-gray-600">Austin, Bee Cave and Lakeway Texas</p>
                   </div>
                 </div>
               </div>
