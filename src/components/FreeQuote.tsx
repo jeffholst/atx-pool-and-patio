@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import emailjs from 'emailjs-com';
 
 const FreeQuote: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,24 +31,24 @@ const FreeQuote: React.FC = () => {
       return;
     }
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormSubmitted(true);
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setFormSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          poolSize: 'small',
-          service: 'cleaning',
-        });
-      }, 5000);
-    }, 1500);
+ 
+    // Use EmailJS to send the email
+    emailjs.send('service_0a98hc8', 'template_8d48mpb', formData, 'BT0Lh4gv5Z1T0wMq8')
+      .then(() => {
+        setIsSubmitting(false);
+        setFormSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', poolSize: '', service: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setFormSubmitted(false);
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        alert('There was an error sending your message. Please try again later.');
+        setIsSubmitting(false);
+      });
   };
 
   return (

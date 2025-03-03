@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import emailjs from 'emailjs-com';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -26,17 +27,23 @@ const ContactForm: React.FC = () => {
     }
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormSubmitted(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setFormSubmitted(false);
-      }, 5000);
-    }, 1500);
+    // Use EmailJS to send the email
+    emailjs.send('service_0a98hc8', 'template_i3rtczo', formData, 'BT0Lh4gv5Z1T0wMq8')
+      .then(() => {
+        setIsSubmitting(false);
+        setFormSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setFormSubmitted(false);
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        alert('There was an error sending your message. Please try again later.');
+        setIsSubmitting(false);
+      });
   };
 
   return (
