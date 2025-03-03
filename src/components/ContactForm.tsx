@@ -160,7 +160,7 @@ const ContactForm: React.FC = () => {
                   
                   <div className="mb-6">
                     <ReCAPTCHA
-                      sitekey="6LdypecqAAAAAPuvCUr4Z9K_nYVo8d77f8xkvtqo"
+                      sitekey="6LeZqOcqAAAAAAwsaZxNBKWgcsGgwXpu4-tSOHTI"
                       onChange={setCaptchaValue}
                     />
                   </div>
