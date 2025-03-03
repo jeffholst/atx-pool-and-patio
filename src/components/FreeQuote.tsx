@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const FreeQuote: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,14 +12,23 @@ const FreeQuote: React.FC = () => {
   
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!captchaValue) {
+      alert('Please complete the captcha.');
+      return;
+    }
     setIsSubmitting(true);
     
     // Simulate form submission
@@ -152,9 +161,15 @@ const FreeQuote: React.FC = () => {
                 </div>
                 
                 <div className="pt-2">
+                  <ReCAPTCHA
+                    sitekey="6LdypecqAAAAAPuvCUr4Z9K_nYVo8d77f8xkvtqo"
+                    onChange={handleCaptchaChange}
+                  />
+                </div>
+                <div className="pt-2">
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !captchaValue}
                     className={`w-full bg-poolblue text-white font-medium py-3 px-6 rounded-md hover:bg-poolblue-dark transition-all duration-300 ease-in-out text-lg
                     ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   >

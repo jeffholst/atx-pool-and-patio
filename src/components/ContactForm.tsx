@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +11,7 @@ const ContactForm: React.FC = () => {
   
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -19,6 +20,10 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!captchaValue) {
+      alert('Please complete the captcha');
+      return;
+    }
     setIsSubmitting(true);
     
     // Simulate form submission
@@ -153,9 +158,16 @@ const ContactForm: React.FC = () => {
                     ></textarea>
                   </div>
                   
+                  <div className="mb-6">
+                    <ReCAPTCHA
+                      sitekey="6LdypecqAAAAAPuvCUr4Z9K_nYVo8d77f8xkvtqo"
+                      onChange={setCaptchaValue}
+                    />
+                  </div>
+                  
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !captchaValue}
                     className={`w-full bg-poolblue text-white font-medium py-3 px-6 rounded-md hover:bg-poolblue-dark transition-all duration-300 ease-in-out 
                     ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   >
