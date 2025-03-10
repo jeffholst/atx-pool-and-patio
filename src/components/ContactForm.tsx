@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-gray-800 font-medium">Service Area</p>
-                    <p className="text-gray-600">Austin, Bee Cave and Lakeway Texas</p>
+                    <p className="text-gray-600">Austin, Bee Cave, Lakeway, and Spicewood Texas</p>
                   </div>
                 </div>
               </div>
