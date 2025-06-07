@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-center bg-cover"
         style={{
-          backgroundImage: 'url("HeroImage03.jpg")',
+          backgroundImage: 'url("HeroImage01.webp")',
           ...parallaxStyle
         }}
       >
