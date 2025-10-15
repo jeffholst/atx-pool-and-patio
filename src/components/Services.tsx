@@ -61,11 +61,11 @@ const Services: React.FC = () => {
             We offer a comprehensive range of pool maintenance services to keep your pool in pristine condition.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {serviceItems.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-white bg-opacity-75 p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:translate-y-[-5px]"
             >
               <div className="flex items-center mb-4">
@@ -76,6 +76,29 @@ const Services: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-center mb-6">Before &amp; After Pool Transformation</h3>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            <div className="flex flex-col items-center">
+              <span className="text-md mb-2 text-gray-700">Before</span>
+              <img
+                src="before.webp"
+                alt="Pool before cleaning"
+                className="w-64 h-960 object-cover rounded-lg shadow"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-md mb-2 text-gray-700">After</span>
+              <img
+                src="after.webp
+                "
+                alt="Pool after cleaning"
+                className="w-64 h-960 object-cover rounded-lg shadow"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
