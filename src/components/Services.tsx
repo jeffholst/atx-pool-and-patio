@@ -79,7 +79,7 @@ const Services: React.FC = () => {
     <section
       id="services"
       className="section-padding bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url(/path/to/your/background/image.jpg)' }}
+      style={{ backgroundImage: 'url(HeroImage04.webp)' }}
     >
       <div className="container mx-auto px-4 md:px-6 bg-white bg-opacity-75 rounded-lg shadow-lg p-8">
         <div className="text-center mb-12 md:mb-16">
@@ -128,7 +128,7 @@ const Services: React.FC = () => {
               style={{ width: `${sliderX}%` }}
             >
               <img
-                src="green.jpg"
+                src="green.webp"
                 alt="Before"
                 className="w-full h-full object-cover"
               />
