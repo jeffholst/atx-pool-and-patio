@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 const Services: React.FC = () => {
+
   const serviceItems = [
     {
       icon: (
@@ -52,8 +53,34 @@ const Services: React.FC = () => {
     },
   ];
 
+  // --- NEW: Handle mouse movement over comparison
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [sliderX, setSliderX] = useState(50); // default to 50% split
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const container = containerRef.current;
+    if (container) {
+      const bounds = container.getBoundingClientRect();
+      const x = ((e.clientX - bounds.left) / bounds.width) * 100;
+      setSliderX(Math.max(0, Math.min(100, x)));
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const container = containerRef.current;
+    if (container && e.touches.length > 0) {
+      const bounds = container.getBoundingClientRect();
+      const x = ((e.touches[0].clientX - bounds.left) / bounds.width) * 100;
+      setSliderX(Math.max(0, Math.min(100, x)));
+    }
+  };
+
   return (
-    <section id="services" className="section-padding bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/path/to/your/background/image.jpg)' }}>
+    <section
+      id="services"
+      className="section-padding bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url(/path/to/your/background/image.jpg)' }}
+    >
       <div className="container mx-auto px-4 md:px-6 bg-white bg-opacity-75 rounded-lg shadow-lg p-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
@@ -78,25 +105,42 @@ const Services: React.FC = () => {
           ))}
         </div>
 
+        {/* Before & After Section */}
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-center mb-6">Before &amp; After Pool Transformation</h3>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="flex flex-col items-center">
-              <span className="text-md mb-2 text-gray-700">Before</span>
+
+          <div
+            ref={containerRef}
+            onMouseMove={handleMouseMove}
+            onTouchMove={handleTouchMove}
+            className="relative w-full max-w-2xl mx-auto aspect-video overflow-hidden rounded-lg shadow-lg cursor-ew-resize select-none"
+          >
+            {/* Before Image */}
+            <img
+              src="blue.jpg"
+              alt="After"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+
+            {/* After Image with clip */}
+            <div
+              className="absolute inset-0 h-full overflow-hidden"
+              style={{ width: `${sliderX}%` }}
+            >
               <img
-                src="before.webp"
-                alt="Pool before cleaning"
-                className="w-64 h-960 object-cover rounded-lg shadow"
+                src="green.jpg"
+                alt="Before"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex flex-col items-center">
-              <span className="text-md mb-2 text-gray-700">After</span>
-              <img
-                src="after.webp
-                "
-                alt="Pool after cleaning"
-                className="w-64 h-960 object-cover rounded-lg shadow"
-              />
+
+            {/* Slider Line */}
+            <div
+              className="absolute top-0 bottom-0"
+              style={{ left: `${sliderX}%`, transform: 'translateX(-50%)' }}
+            >
+              <div className="w-1 bg-poolblue h-full shadow-sm" />
+              <div className="w-5 h-5 bg-white border border-gray-400 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-md"></div>
             </div>
           </div>
         </div>
